@@ -40,6 +40,17 @@ img#hannah {
 #show {
     color: #000;
 }
-h1,h2 {
+h1,h2,h3 {
     font-family: 'Adamina', sans-serif;
+}
+
+div.personal * {
+    text-align: center;
+    margin: 0 auto;
+}
+div.personal h2, div.personal h3 {
+    margin-bottom: 8px;
+}
+div.personal img {
+    margin-top: 10px;
 }
