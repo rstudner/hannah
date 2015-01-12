@@ -6,32 +6,32 @@ body {
     padding: 40px;
     overflow-x: hidden; /* For Opera */
     -webkit-box-shadow:
-    inset #333633 0 0 0 5px,
-    inset #4b4f4b 0 0 0 1px,
-    inset #636963 0 0 0 10px,
-    inset #7b827b 0 0 0 11px,
-    inset #939c93 0 0 0 16px,
-    inset #c3cfc3 0 0 0 17px,
-    inset #dbe8db 0 0 0 22px,
-    inset #f2fff2 0 0 0 23px;
+    inset #333333 0 0 0 5px,
+    inset #525252 0 0 0 1px,
+    inset #696969 0 0 0 10px,
+    inset #7D7D7D 0 0 0 11px,
+    inset #8F8F8F 0 0 0 16px,
+    inset #BDBDBD 0 0 0 17px,
+    inset #D4D4D4 0 0 0 22px,
+    inset #F2F2F2 0 0 0 23px;
     -moz-box-shadow:
-    inset #333633 0 0 0 5px,
-    inset #4b4f4b 0 0 0 1px,
-    inset #636963 0 0 0 10px,
-    inset #7b827b 0 0 0 11px,
-    inset #939c93 0 0 0 16px,
-    inset #c3cfc3 0 0 0 17px,
-    inset #dbe8db 0 0 0 22px,
-    inset #f2fff2 0 0 0 23px;
+    inset #333333 0 0 0 5px,
+    inset #525252 0 0 0 1px,
+    inset #696969 0 0 0 10px,
+    inset #7D7D7D 0 0 0 11px,
+    inset #8F8F8F 0 0 0 16px,
+    inset #BDBDBD 0 0 0 17px,
+    inset #D4D4D4 0 0 0 22px,
+    inset #F2F2F2 0 0 0 23px;
     box-shadow:
-    inset #333633 0 0 0 5px,
-    inset #4b4f4b 0 0 0 1px,
-    inset #636963 0 0 0 10px,
-    inset #7b827b 0 0 0 11px,
-    inset #939c93 0 0 0 16px,
-    inset #c3cfc3 0 0 0 17px,
-    inset #dbe8db 0 0 0 22px,
-    inset #f2fff2 0 0 0 23px;
+    inset #333333 0 0 0 5px,
+    inset #525252 0 0 0 1px,
+    inset #696969 0 0 0 10px,
+    inset #7D7D7D 0 0 0 11px,
+    inset #8F8F8F 0 0 0 16px,
+    inset #BDBDBD 0 0 0 17px,
+    inset #D4D4D4 0 0 0 22px,
+    inset #F2F2F2 0 0 0 23px;
 }
 img#hannah {
     height: auto;
