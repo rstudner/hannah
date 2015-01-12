@@ -11,16 +11,26 @@
   <link href="css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
 
+  <link href='http://fonts.googleapis.com/css?family=Adamina' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <div class="container">
-  <div class="row">
+  <div id="intro" class="row">
     <div class="center-block">
       <h1>Hannah and her art :)</h1>
+      <p>Hannah is an aspiring artist and all around "pretty awesome girl".</p>
+      <div style="margin-top:50px;">
+        <button id="show" type="button" class="btn btn-default">Show me some art!</button>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <script src="//neon.galleriadisplay.com/7c153afc236cd5710cd366517e5a74e1f618ce93/init.js"></script>
+  <div id="carosel" class="row" style="display: none;">
+    <div class="center-block">
+      <h2 style="margin-top:20px; text-align: center;">The Art!</h2>
+    </div>
+    <div style="margin-top: 20px;">
+      <script src="//neon.galleriadisplay.com/7c153afc236cd5710cd366517e5a74e1f618ce93/init.js"></script>
+    </div>
   </div>
 
 </div>
@@ -29,5 +39,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#show').click(function() {
+      $("#intro").hide();
+      $("#carosel").fadeIn();
+    })
+  });
+</script>
 </body>
 </html>
