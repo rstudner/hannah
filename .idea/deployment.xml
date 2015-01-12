@@ -9,6 +9,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="hannah-art.net">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/hannah-art.net/public_html" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
   </component>
 </project>
