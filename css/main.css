@@ -61,3 +61,11 @@ div.personal img {
     box-shadow: 0px 00px 20px 5px #FFFFFF;
     margin-top: 15px;
 }
+/*
+BS override
+*/
+.btn-default {
+    color: #000000;
+    background-color: rgba(246, 244, 244, 0.8);
+    border-color: #464545;
+}
