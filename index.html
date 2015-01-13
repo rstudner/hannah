@@ -40,11 +40,19 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
+    var l = window.location.hash;
     $('#personal').fadeIn();
     $('#show').fadeIn().click(function() {
       $("#intro").hide();
       $("#carosel").fadeIn('slow');
-    })
+      window.location.hash='gallery';
+    });
+    if (l.indexOf('gallery') !== -1) {
+      $("#intro").hide();
+      $("#carosel").fadeIn('slow');
+      window.location.hash='gallery';
+    }
+
   });
 </script>
 
