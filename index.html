@@ -17,14 +17,14 @@
 <div class="container page-container">
   <div id="intro" class="row">
     <div class="center-block">
-      <div class="personal">
+      <div id="personal" class="personal" style="display:none;">
         <h2>Hannah Lea Wentzel</h2>
         <h3>Aspiring Artist</h3>
         <div class="image">
           <img style="width: 300px;" src="images/hannah.jpg"/>
         </div>
         <div style="margin-top:40px;">
-          <button id="show" type="button" class="btn btn-default">Show me some art!</button>
+          <button id="show" type="button" class="btn btn-default" style="display:none;">Show me some art!</button>
         </div>
       </div>
     </div>
@@ -43,7 +43,8 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $('#show').click(function() {
+    $('#personal').fadeIn();
+    $('#show').fadeIn().click(function() {
       $("#intro").hide();
       $("#carosel").fadeIn('slow');
     })
