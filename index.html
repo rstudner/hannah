@@ -31,14 +31,7 @@
     </div>
   </div>
   <div id="carosel" class="row" style="display: none;overflow: hidden;">
-    <div style="margin-top: 20px;overflow: hidden;">
-      <script src="//neon.galleriadisplay.com/e83f6dd4155bcdc39e3dc9654cf156686c430b11/init.js"></script>
-      <script type="text/javascript">
-        GD.configure({
-          autoplay: 6000,
-          imagePan: false
-        });
-      </script>
+    <div id="galleryHolder" style="margin-top: 20px;overflow: hidden;">
     </div>
   </div>
 
@@ -48,6 +41,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script type="text/javascript">
+  var hannah = {
+    needGallery: true,
+    showGallery: function() {
+      if (hannah.needGallery) {
+        var script = document.createElement( "script" );
+        script.type = "text/javascript";
+        script.src = "//neon.galleriadisplay.com/e83f6dd4155bcdc39e3dc9654cf156686c430b11/init.js";
+        $("#galleryHolder").append(script);
+        hannah.needGallery = false;
+      }
+    }
+  };
   $(document).ready(function() {
     var l = window.location.hash;
     $('#personal').fadeIn();
@@ -55,11 +60,13 @@
       $("#intro").hide();
       $("#carosel").fadeIn('slow');
       window.location.hash = 'gallery';
+      hannah.showGallery();
     });
     if (l.indexOf('gallery') !== -1) {
       $("#intro").hide();
       $("#carosel").fadeIn('slow');
       window.location.hash = 'gallery';
+      hannah.showGallery();
     }
   });
 </script>
