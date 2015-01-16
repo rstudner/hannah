@@ -14,32 +14,51 @@
 </head>
 <body>
 <div class="container page-container">
-  <div id="intro" class="row">
-    <div class="center-block">
-      <div id="personal" class="personal" style="display:none;">
-        <h2>Hannah Lea Wentzel</h2>
+  <div  role="tabpanel">
 
-        <h3>Aspiring Artist</h3>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+      <li role="presentation"><a href="#art" aria-controls="art" role="tab" data-toggle="tab">art</a></li>
+      <li role="presentation"><a href="#Bio" aria-controls="Bio" role="tab" data-toggle="tab">Bio</a></li>
+    </ul>
 
-        <div class="image">
-          <img style="width: 300px;" src="images/hannah.jpg"/>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+        <div id="personal" class="personal" style="display:none;">
+          <h2>Hannah Lea Wentzel</h2>
+
+          <h3>Aspiring Artist</h3>
+
+          <div class="image">
+            <img style="width: 300px;" src="images/hannah.jpg"/>
+          </div>
+          <div style="margin-top:40px;">
+            <button id="show" type="button" class="btn btn-default" style="display:none;">Show me some art!</button>
+          </div>
         </div>
-        <div style="margin-top:40px;">
-          <button id="show" type="button" class="btn btn-default" style="display:none;">Show me some art!</button>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="art">
+        <div id="galleryHolder" style="margin-top: 20px;overflow: hidden;">
+
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="Bio">
+        <div style="margin-top:10%;">
+          <h4>Hannah Hannah Bo Banna, Banana Fana No Nana, Fi Fy Fo Nana, Hannah!</h4>
         </div>
       </div>
     </div>
+
   </div>
-  <div id="carosel" class="row" style="display: none;overflow: hidden;">
-    <div id="galleryHolder" style="margin-top: 20px;overflow: hidden;">
-    </div>
-  </div>
+
 
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script type="text/javascript">
   var hannah = {
     needGallery: true,
@@ -54,20 +73,31 @@
     }
   };
   $(document).ready(function() {
+
+    $("a[data-toggle='tab']").on('shown.bs.tab', function(e) {
+      //e.target // newly activated tab
+      //e.relatedTarget // previous active tab
+      var newTab = $(e.target);
+      var whichTab = newTab.prop('hash').split("#")[1]
+      if (whichTab.indexOf("art") > -1) {
+        hannah.showGallery();
+      }
+    });
+
     var l = window.location.hash;
     $('#personal').fadeIn();
-    $('#show').fadeIn().click(function() {
-      $("#intro").hide();
-      $("#carosel").fadeIn('slow');
-      window.location.hash = 'gallery';
-      hannah.showGallery();
-    });
-    if (l.indexOf('gallery') !== -1) {
-      $("#intro").hide();
-      $("#carosel").fadeIn('slow');
-      window.location.hash = 'gallery';
-      hannah.showGallery();
-    }
+//    $('#show').fadeIn().click(function() {
+//      $("#intro").hide();
+//      $("#carosel").fadeIn('slow');
+//      window.location.hash = 'gallery';
+//      hannah.showGallery();
+//    });
+//    if (l.indexOf('gallery') !== -1) {
+//      $("#intro").hide();
+//      $("#carosel").fadeIn('slow');
+//      window.location.hash = 'gallery';
+//      hannah.showGallery();
+//    }
   });
 </script>
 
