@@ -19,11 +19,12 @@
 </head>
 <body>
 <div class="container page-container">
-  <div  role="tabpanel">
+  <div role="tabpanel">
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><h4>Home</h4></a></li>
+      <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><h4>
+        Home</h4></a></li>
       <li role="presentation"><a href="#art" aria-controls="art" role="tab" data-toggle="tab"><h4>Art</h4></a></li>
       <li role="presentation"><a href="#Bio" aria-controls="Bio" role="tab" data-toggle="tab"><h4>Bio</h4></a></li>
     </ul>
@@ -54,6 +55,7 @@
             <img src="images/ponySphere.jpg" data-title="Pony Sphere" data-description="Pony Sphere Description">
             <img src="images/colorGuy.jpg" data-title="Color Guy" data-description="Color Guy Description">
             <img src="images/creatingArt.jpg" data-title="Creating Art" data-description="Creating Art Description">
+          </div>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane" id="Bio">
@@ -70,7 +72,7 @@
 
 <script type="text/javascript">
 
-  $(document).ready(function() {
+  $(document).ready(function () {
 //    $('#galleryHolder').galleria({
 //      width: 700,
 //      height: 467 //--I made heights match
@@ -80,7 +82,7 @@
     Galleria.run('.galleria', {
       height: 500 //--I made heights match
     });
-    $("a[data-toggle='tab']").on('shown.bs.tab', function(e) {
+    $("a[data-toggle='tab']").on('shown.bs.tab', function (e) {
       //e.target // newly activated tab
       //e.relatedTarget // previous active tab
       var newTab = $(e.target);
@@ -108,9 +110,9 @@
 </script>
 
 <script>
-  (function(i, s, o, g, r, a, m) {
+  (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
+    i[r] = i[r] || function () {
       (i[r].q = i[r].q || []).push(arguments)
     }, i[r].l = 1 * new Date();
     a = s.createElement(o),
